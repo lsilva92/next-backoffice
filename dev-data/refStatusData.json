@@ -1,0 +1,10 @@
+[
+  {
+    "key": true,
+    "value": "Synced"
+  },
+  {
+    "key": false,
+    "value": "Not Synced"
+  }
+]

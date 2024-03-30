@@ -1,0 +1,23 @@
+[
+  {
+    "ticket": "TCK000000",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero laudantium quidem officiis possimus quo asperiores, cupiditate eos aspernatur impedit vitae at architecto ex, aliquid tempora, necessitatibus dolorem pariatur? Nisi, eum!",
+    "bd": "BD_DEV",
+    "sync": true,
+    "created": "2024-08-02T23:00:00.000Z"
+  },
+  {
+    "ticket": "TCK000001",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex deserunt numquam labore voluptatem fugiat quisquam quas iusto laudantium nemo enim, aut ab culpa eligendi odit deleniti nesciunt ut mollitia neque!",
+    "bd": "BD_DEV",
+    "sync": false,
+    "created": "2024-08-02T23:00:00.000Z"
+  },
+  {
+    "ticket": "TCK000002",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit numquam fugiat commodi quisquam eum aliquam sunt minima necessitatibus quam? Autem sed aliquid veniam corrupti veritatis architecto doloremque. Atque, cupiditate quia!",
+    "bd": "BD_DEV",
+    "sync": true,
+    "created": "2024-08-02T23:00:00.000Z"
+  }
+]

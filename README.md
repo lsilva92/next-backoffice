@@ -1,6 +1,7 @@
-# Next.js & NextUI Template
+# Next-Backoffice
 
-This is a template for creating applications using Next.js 13 (app directory) and NextUI (v2).
+This is a backoffice to use according with your needs while learning NextJs at the same time.
+This app is using Next.js 13 (app directory) and NextUI (v2).
 
 ## Technologies Used
 
@@ -14,19 +15,25 @@ This is a template for creating applications using Next.js 13 (app directory) an
 
 ## How to Use
 
-
-### Use the template with create-next-app
-
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
-
 ### Install dependencies
 
 ```bash
 npm install
+```
+
+### Create .env.local
+
+create a .env.local in next-backoffice folder with the variables:
+
+- MONGODB_URI: with de URI of your MongoDB connection
+- MONGO_DATABASE: DB with a name of your choice
+- MONGO_COLLECTION: Collection with a name of your choice
+
+### Import sample data to mongo
+
+```bash
+cd dev-data
+node importData.js
 ```
 
 ### Run the development server
