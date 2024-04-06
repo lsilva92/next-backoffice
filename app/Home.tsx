@@ -25,7 +25,7 @@ export default function HomeClientComponent({ data }: any) {
 	type Row = typeof rows[0];
 
 	const router = useRouter();
-	const[isLoading, setIsLoading] = useState<Boolean>(false);
+	const[isLoading, setIsLoading] = useState<Boolean>(true);
 	const statusColorMap: Record<string, ChipProps["color"]>  = {
 		true: "success",
 		false: "warning",
@@ -412,34 +412,41 @@ export default function HomeClientComponent({ data }: any) {
 		}
 
 	}, [ updateModal ]);
+ 
+	useEffect(() => {
+		setIsLoading(false)
+	},[]);
 
-	return (
-		<div>
-			<TableComponent 
-				isLoading={isLoading} 
-				rows={items}
-				renderCell={renderCell}
-				addNewItem={addNewItem}
-				topContent={topContent}
-				bottomContent={bottomContent}
-				headerColumns={headerColumns}
-				sortDescriptor={sortDescriptor}
-				setSortDescriptor={setSortDescriptor}
-				sortedItems={sortedItems}
-				selectedKeys={selectedKeys}
-				setSelectedKeys={setSelectedKeys}
-			/>
-			<ModalComponent 
-				backdrop={'blur'}
-				isOpen={isOpen}
-				onClose={onClose}
-				modelTitle={modelTitle}
-				handleConfirm={handleConfirm}
-				disableConfirm={disableConfirm}
-			>
-				<RenderModalBody />
-			</ModalComponent>
-		</div>
-  	)
-
+	if(isLoading){
+		return <h3>Loading...</h3>
+	}else{
+		return (
+			<div>
+				<TableComponent 
+					isLoading={isLoading} 
+					rows={items}
+					renderCell={renderCell}
+					addNewItem={addNewItem}
+					topContent={topContent}
+					bottomContent={bottomContent}
+					headerColumns={headerColumns}
+					sortDescriptor={sortDescriptor}
+					setSortDescriptor={setSortDescriptor}
+					sortedItems={sortedItems}
+					selectedKeys={selectedKeys}
+					setSelectedKeys={setSelectedKeys}
+				/>
+				<ModalComponent 
+					backdrop={'blur'}
+					isOpen={isOpen}
+					onClose={onClose}
+					modelTitle={modelTitle}
+					handleConfirm={handleConfirm}
+					disableConfirm={disableConfirm}
+				>
+					<RenderModalBody />
+				</ModalComponent>
+			</div>
+		)
+	}
 }

@@ -3,7 +3,7 @@ import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Input, 
 import { TableProps } from "@/types";
 
 export function TableComponent({isLoading, renderCell , headerColumns, topContent, bottomContent, sortDescriptor, setSortDescriptor, sortedItems, selectedKeys, setSelectedKeys }: TableProps) {
-    if(isLoading){
+	if(isLoading){
 		return <h3>Loading...</h3>
 	}else{
 		return (
