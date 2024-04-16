@@ -40,4 +40,4 @@ export function TableComponent({isLoading, renderCell , headerColumns, topConten
 			</Table>
 		  );
 	}
-}
+};

@@ -13,8 +13,8 @@ import { DeleteIcon } from "@/components/icons/DeleteIcon";
 import { PlusIcon } from "@/components/icons/PlusIcon";
 import { SearchIcon } from "@/components/icons/SearchIcon";
 import { ChevronDownIcon  } from "@/components/icons/ChevronDownIcon";
-import { TableComponent } from "@/app/components/common/Table";
-import { ModalComponent } from "@/app/components/common/ModalComponent";
+import { TableComponent } from "@/components/table/table";
+import { ModalComponent } from "@/components/modal/modal";
 import { Item, Column } from '@/types';
 
 export default function HomeClientComponent({ data }: any) {
@@ -366,7 +366,7 @@ export default function HomeClientComponent({ data }: any) {
 				);
 			default:
 				return(
-					<div className="flex flex-col max-w-xl h-5">
+					<div className="flex flex-col max-w-lg h-5">
 						<p className="text-bold text-medium capitalize text-ellipsis overflow-hidden whitespace-nowrap">{cellValue}</p>
 					</div>
 				)
